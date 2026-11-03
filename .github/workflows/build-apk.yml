@@ -31,10 +31,8 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             build-essential git zip unzip ccache autoconf automake libtool \
             pkg-config cmake zlib1g-dev libncurses5-dev libncursesw5-dev \
-            libtinfo5 libffi-dev libssl-dev libsdl2-dev libsdl2-image-dev \
-            libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev \
-            libavformat-dev libavcodec-dev libgstreamer1.0-dev \
-            openjdk-17-jdk python3-pip
+            libffi-dev libssl-dev python3-pip
+          sudo apt-get install -y libtinfo5 || sudo apt-get install -y libtinfo6
 
       - name: Cache Buildozer global dir (Android SDK/NDK, p4a)
         uses: actions/cache@v4
